@@ -139,8 +139,9 @@ module data_feeds::router {
         );
     }
 
+    // Thala-modified (made public)
     #[test_only]
-    fun set_up_test(publisher: &signer) {
+    public fun set_up_test(publisher: &signer) {
         init_module(publisher);
     }
 

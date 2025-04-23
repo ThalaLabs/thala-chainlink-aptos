@@ -638,8 +638,9 @@ module data_feeds::registry {
         result.config_id
     }
 
+    // Thala-modified (made public)
     #[test_only]
-    fun set_up_test(publisher: &signer, platform: &signer) {
+    public fun set_up_test(publisher: &signer, platform: &signer) {
         use aptos_framework::account::{Self};
         account::create_account_for_test(signer::address_of(publisher));
 
@@ -647,6 +648,13 @@ module data_feeds::registry {
         platform::storage::init_module_for_testing(platform);
 
         init_module(publisher);
+    }
+
+    // Thala-added
+    #[test_only]
+    public fun test_perform_update(feed_id: vector<u8>, report_data: vector<u8>) acquires Registry {
+        let registry = borrow_global_mut<Registry>(get_state_addr());
+        perform_update(registry, feed_id, report_data);
     }
 
     #[test_only]
