@@ -5,8 +5,8 @@ authors = []
 
 # Thala Modified
 [addresses]
-platform = "0x516e771e1b4a903afe74c27d057c65849ecc1383782f6642d7ff21425f4f9c99"
-owner = "0xcafe"
+platform = "0x9976bb288ed9177b542d568fa1ac386819dc99141630e582315804840f41928a"
+owner = "0xb3c4f75936dc2f8af0398408a7ef739cca2601439be9100eb7a792c475923d1"
 
 [dev-addresses]
 platform = "0x100"
